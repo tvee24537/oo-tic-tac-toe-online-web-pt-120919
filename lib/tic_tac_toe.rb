@@ -52,11 +52,11 @@ class TicTacToe
   end  
   
   #logic of a single complete turn, see lad intrustion for details
-  def turn
-    puts "#{current_player}'s turn, please enter a number 1-9:"
+  def turn    
+    cp = current_player
+    puts "#{cp}'s turn, please enter a number 1-9:"
     input = gets.strip
     index = input_to_index(input)
-    cp = current_player
     if valid_move?(index)
       move(index, cp)
     else
